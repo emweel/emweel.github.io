@@ -17,6 +17,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     background-color: black;
     color: white;
     font-family: 'Homemade Apple', system-ui;
