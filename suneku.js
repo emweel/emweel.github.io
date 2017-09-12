@@ -15,6 +15,7 @@ var x_velocity = 1;
 var y_velocity = 0;
 var trail=[];
 var tail = 3;
+var last_key = 39; //right
 
 function game() {
     player_x+=x_velocity;
@@ -63,15 +64,31 @@ function game() {
 function keyPush(e) {
     switch(e.keyCode) {
         case 37:
+            if (last_key === 39) {
+                break;
+            }
+            last_key = 37;
             x_velocity=-1;y_velocity=0;
             break;
         case 38:
+            if (last_key === 40) {
+                break;
+            }
+            last_key = 38;
             x_velocity=0;y_velocity=-1;
             break;
         case 39:
+            if (last_key === 37) {
+                break;
+            }
+            last_key = 39;
             x_velocity=1;y_velocity=0;
             break;
         case 40:
+            if (last_key === 38) {
+                break;
+            }
+            last_key = 40;
             x_velocity=0;y_velocity=1;
             break;
     }
